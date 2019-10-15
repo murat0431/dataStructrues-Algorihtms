@@ -99,8 +99,16 @@ public class MyHashTable {
 				current.next = new Node(key, value, null);
 				this.size++;
 				if (getLoadFactor() > LOAD_FACTOR_THRESHOLD) {
-					Node[] newTable = new Node[table.length*2];
+					Node[] oldTable = this.table;
+					this.table = new Node[table.length*2];
+					this.size = 0;
 					//TODO copy old array elements into new array by calling add function recursively
+					for (int i = 0; i < oldTable.length; i++) {
+						Node n = oldTable[i];
+						while (n.next != null) {
+							add(n.key, n.value);
+						}
+					}
 				}
 				
 			}
