@@ -2,7 +2,11 @@ package ds;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * 
+ * @author murat
+ *
+ */
 public class MyHashTable {
 	public final int INITIAL_SIZE = 11;
 	public static final double LOAD_FACTOR_THRESHOLD = 0.75;

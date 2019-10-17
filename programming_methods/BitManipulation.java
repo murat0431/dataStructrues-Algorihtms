@@ -1,5 +1,9 @@
 package programming_methods;
-
+/**
+ * 
+ * @author murat
+ *
+ */
 public class BitManipulation {
 	public static void main(String[] args) {
 		int x = 21;
