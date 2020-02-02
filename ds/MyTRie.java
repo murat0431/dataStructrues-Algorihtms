@@ -27,6 +27,7 @@ public class MyTRie {
 			if (s.equals("")) {
 				return new TrieNode(true); 
 			}
+			return null;
 		}
 		
 	}

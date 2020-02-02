@@ -36,16 +36,7 @@ public class Driver {
 		}
 		
 		*/
-		
-		AmazonGo a = new AmazonGo();
-		a.logCustomer("2");
-		a.logCustomer("2");
-		a.logCustomer("3");
-		a.logCustomer("2");
-		a.logCustomer("3");
-		a.logCustomer("3");
-		a.logCustomer("2");
-		System.out.println(a.getFirstNonReturningCustomer());
+
 		
 	}
 
