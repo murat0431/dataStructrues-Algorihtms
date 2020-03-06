@@ -61,7 +61,7 @@ public class BFS {
 	public static void bfs(int[][] graph, int source) {
 		int size = graph.length;
 		boolean[] visited = new boolean[size];
-		Queue<Integer> q = new LinkedList();
+		Queue<Integer> q = new LinkedList<>();
 		q.add(source);
 		visited[source] = true;
 		while (!q.isEmpty()) {
