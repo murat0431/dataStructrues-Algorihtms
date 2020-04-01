@@ -7,4 +7,7 @@ public interface BST {
     void preOrder();
     void inOrder();
     void postOrder();
+    void levelOrder();
+    void traverse();
+    void init();
 }
