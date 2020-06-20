@@ -1,13 +1,15 @@
 package ds.impl;
 
 import ds.inter.BST;
+import javafx.scene.effect.Reflection;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class BSTImpl implements BST {
-    Node root;
-    int size;
+    private Node root;
+    private int size;
     public class Node {
         int value;
         Node left;
@@ -26,7 +28,7 @@ public class BSTImpl implements BST {
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
@@ -130,8 +132,26 @@ public class BSTImpl implements BST {
 
     }
 
+    @Override
+    public void inOrderIterative() {
+        System.out.print("inOrderIterative: ");
+        Node current = root;
+        Stack<Node> stack = new Stack<>();
+        while(current!=null || !stack.empty()) {
+            while(current != null) {
+                stack.push(current);
+                current = current.left;
+            }
+            Node x = stack.pop();
+            System.out.print(x.value + " ");
+            if (x.right != null) current = x.right;
+        }
+    }
+
     public void traverse() {
         inOrder();
+        System.out.println();
+        inOrderIterative();
         System.out.println();
         preOrder();
         System.out.println();
